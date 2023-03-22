@@ -10,7 +10,7 @@ public class Sinistro{
         this.data = data;
         this.endereco = endereco;
         Random gerarInteiro = new Random();
-        int id = gerarInteiro.nextInt();        
+        this.id = gerarInteiro.nextInt();        
     }
 
     //Getters e Setters
@@ -31,7 +31,7 @@ public class Sinistro{
     public String getEndereco (){
         return endereco;
     }
-    public void setEndereco(){
+    public void setEndereco(String endereco){
         this.endereco = endereco;
     }
 
