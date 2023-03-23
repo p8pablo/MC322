@@ -3,7 +3,7 @@
 
 public class Main {
     // metodo da Main
-    public static void main(){
+    public static void main(String[] args){
         /*
          *--- Fluxo do programa ---
          * Inserir dados do cliente
@@ -19,11 +19,16 @@ public class Main {
          *      Armazenar na Classe Seguradora
          * 
          */
-        Cliente cliente = new Cliente(null, null, null, 0, null);
+        Cliente cliente = new Cliente(null, "158.481.066-14", null, 0, null);
         Veiculo veiculo = new Veiculo(null, null, null);
         Sinistro sinistro = new Sinistro(0, null, null);
         Seguradora seguradora = new Seguradora(null, null, null, null);
+        if (Cliente.validarCpf(Cliente.formatarCpf("158.481.066-14"))){
+            System.out.println("Cpf Válido");
 
+        }else{
+            System.out.println("Cpf Inválido");
+        }
         
         
 

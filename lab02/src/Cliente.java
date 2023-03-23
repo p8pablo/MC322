@@ -43,14 +43,14 @@ public class Cliente {
         diferenteAnterior++;
       }
     }
-    if (diferenteAnterior != 0) {
+    if (diferenteAnterior == 0) {
       return false;
     }
 
     // Algoritmo para definir validade do CPF
     int soma1dig = 0;
     int multiplicador1 = 2;
-    for (int i = 8; i <= 0; i--) {
+    for (int i = 8; i >= 0; i--) {
       int valor = Character.getNumericValue(cpf.charAt(i));
       soma1dig += multiplicador1 * valor;
       multiplicador1 ++;
@@ -62,13 +62,13 @@ public class Cliente {
       }
     } else {
       int digito = 11 - resto1;
-      if ((char) digito != cpf.charAt(9)) {
+      if (digito != Character.getNumericValue(cpf.charAt(9))) {
         return false;
       }
     }
     int soma2dig = 0;
     int multiplicador2 = 2;
-    for (int i = 9; i <= 0; i--) {
+    for (int i = 9; i >= 0; i--) {
       int valor = Character.getNumericValue(cpf.charAt(i));
       soma2dig += multiplicador2 * valor;
       multiplicador2 ++;
@@ -81,7 +81,7 @@ public class Cliente {
     }
     else{
       int digito2 = 11 - resto2;
-      if ((char) digito2 != cpf.charAt(10)) {
+      if (digito2 != Character.getNumericValue(cpf.charAt(10))) {
         return false;
       }
     }
