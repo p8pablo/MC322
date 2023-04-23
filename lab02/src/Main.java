@@ -23,7 +23,7 @@ public class Main {
         Veiculo veiculo = new Veiculo(null, null, null);
         Sinistro sinistro = new Sinistro(0, null, null);
         Seguradora seguradora = new Seguradora(null, null, null, null);
-        if (Cliente.validarCpf(Cliente.formatarCpf("158.481.066-14"))){
+        if (Cliente.validarCpf(Cliente.formatarCpf("600.653.386-34"))){
             System.out.println("Cpf Válido");
 
         }else{
