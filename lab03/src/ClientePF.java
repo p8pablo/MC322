@@ -19,7 +19,7 @@ public class ClientePF extends Cliente {
     String genero,
     String classeEconomica,
     ArrayList<Veiculo> listaVeiculos,
-    String cpf,
+    final String cpf,
     LocalDate dataNascimento
   ) {
     super(nome, endereco, listaVeiculos);
@@ -30,6 +30,7 @@ public class ClientePF extends Cliente {
     this.dataNascimento = dataNascimento;
     this.classeEconomica = classeEconomica;
   }
+
   //Getters e Setters
 
   public String getCpf() {
@@ -149,16 +150,28 @@ public class ClientePF extends Cliente {
   //toString
   @Override
   public String toString() {
-    return 
-      "Nome: "+ getNome() + "\n" +
-      "CPF: " + getCpf() + "\n" +
-      "Gênero " + getGenero() + "\n" +
-      "Data Licenca: " + getDataLicenca() + "\n" +
-      "Educação: " + getEducacao() + "\n" +
-      "Data Nascimento: " + getDataNascimento() + "\n" +
-      "Classe Economica: " + getClasseEconomica() + "\n" 
-      ;
+    return (
+      "Nome: " +
+      getNome() +
+      "\n" +
+      "CPF: " +
+      getCpf() +
+      "\n" +
+      "Gênero " +
+      getGenero() +
+      "\n" +
+      "Data Licenca: " +
+      getDataLicenca() +
+      "\n" +
+      "Educação: " +
+      getEducacao() +
+      "\n" +
+      "Data Nascimento: " +
+      getDataNascimento() +
+      "\n" +
+      "Classe Economica: " +
+      getClasseEconomica() +
+      "\n"
+    );
   }
-  
-  
 }

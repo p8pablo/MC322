@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Sinistro {
 
-  private int id;
+  private final int id;
   private LocalDate data;
   private String endereco;
   private Seguradora seguradora;
@@ -12,7 +12,7 @@ public class Sinistro {
 
   //Construtor
   public Sinistro(
-    int id,
+    final int id,
     LocalDate data,
     String endereco,
     Seguradora seguradora,
@@ -31,10 +31,6 @@ public class Sinistro {
   //Getters e Setters
   public int getId() {
     return id;
-  }
-
-  public void setId(int id) {
-    this.id = id;
   }
 
   public LocalDate getData() {

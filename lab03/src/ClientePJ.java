@@ -8,7 +8,7 @@ public class ClientePJ extends Cliente {
   //Construtor
 
   public ClientePJ(
-    String cnpj,
+    final String cnpj,
     LocalDate dataFundacao,
     String nome,
     String endereco,
