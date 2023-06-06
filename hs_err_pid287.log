@@ -1,0 +1,33 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fc51e43ca77, pid=287, tid=492
+#
+# JRE version: OpenJDK Runtime Environment Temurin-17.0.6+10 (17.0.6+10) (build 17.0.6+10)
+# Java VM: OpenJDK 64-Bit Server VM Temurin-17.0.6+10 (17.0.6+10, mixed mode, tiered, compressed oops, compressed class ptrs, parallel gc, linux-amd64)
+# Problematic frame:
+# V  [libjvm.so+0x41ea77]
+[timeout occurred during error reporting in step "printing problematic frame"] after 30 s.
+# No core dump will be written. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/adoptium/adoptium-support/issues
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: --add-modules=ALL-SYSTEM --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable -javaagent:/home/p8pablo/.vscode-server/extensions/redhat.java-1.17.0-linux-x64/lombok/lombok-1.18.24.jar -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/home/p8pablo/.vscode-server/data/User/workspaceStorage/786263c44797aa524cb7cff0ce6bc061/redhat.java -Daether.dependencyCollector.impl=bf /home/p8pablo/.vscode-server/extensions/redhat.java-1.17.0-linux-x64/server/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar -configuration /home/p8pablo/.vscode-server/data/User/globalStorage/redhat.java/1.17.0/config_linux -data /home/p8pablo/.vscode-server/data/User/workspaceStorage/786263c44797aa524cb7cff0ce6bc061/redhat.java/jdt_ws
+
+Host: 
+[timeout occurred during error reporting in step "printing summary machine and OS info"] after 30 s.
+
+[timeout occurred during error reporting in step "printing date and time"] after 30 s.
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fc4e8000eb0):  JavaThread "Attach Listener" daemon [_thread_in_vm, id=492, stack(0x00007fc4fc000000,0x00007fc4fc100000)]
+
+Stack: [0x00007fc4fc000000,0x00007fc4fc100000],  sp=0x00007fc4fc0fec50,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x41ea77]
+------ Timeout during error reporting after 120 s. ------
